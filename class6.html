@@ -1,0 +1,60 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+
+// class definition
+class Restaurant{
+    constructor(name,location,postcode){
+        console.log("New instance has been logged.")
+        this.name = "Nandos";
+        this.location = "Greenwich";
+        this.postcode = "SE108QB";
+        this.typeOfFood = ["chicken", "chips", "desert", "fizzy drinks", "hot sauces"]
+    }
+}
+
+
+// class usage
+let nandos = new Restaurant();
+console.log(nandos);
+
+console.log(nandos.typeOfFood[4]);
+
+console.log(".....")
+
+
+// CAPTURE CONSTRUCTOR PARAM BELOW
+
+
+// class definition
+class Student{
+    constructor(firstName, lastName, age, canVote, hobbies, fullName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.canVote = canVote;
+        this.hobbies = hobbies;
+        this.fullName = firstName + " " + lastName
+    }
+}
+
+// class usage
+let person1 = new Student("Uchenna", "Attah", 28, true, ["Football", "Learning to program", "Video Games"]);
+console.log(person1);
+console.log(person1.hobbies[0])
+console.log("---")
+let person2 = new Student("Michael", "Bailey", 28, true, ["Football", "Boxing", "Video Games"]);
+console.log(person2);
+console.log(person2.hobbies[1])
+
+console.log("...")
+
+console.log(person1.firstName === person2.firstName)
+
+
+</script>
+</body>
+</html>

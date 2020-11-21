@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+
+// iterating over an array of objects.
+
+let footballers = [
+    {
+        firstname: "Hugo",
+        lastname: "Lloris",
+        position: "Goalkeeper",
+        shirtNumber: 1,
+        nationality: "French",
+    },
+    {
+        firstname: "Sergio",
+        lastname: "Regulion",
+        position: "Left Back",
+        shirtNumber: [],
+        nationality: "Spain",
+    },
+    {
+        firstname: "Eric",
+        lastname: "Dier",
+        position: "Centre Back",
+        shirtNumber: 15,
+        nationality: "England",
+    },
+    {
+        firstname: "Toby",
+        lastname: "Alderwiereld",
+        position: "Right back",
+        shirtNumber: 4,
+        nationality: "Belgium",
+    },
+    {
+        firstname: "Serge",
+        lastname: "Aurier",
+        position: "Right back",
+        shirtnumber: 24,
+        nationality: "Ivory Coast",
+    },
+
+]
+
+footballers[1].shirtNumber = 3;
+
+let fullname = footballers.map(function (full){
+    console.log(`${full.firstname} ${full.lastname}`);
+});
+
+console.log("---")
+
+
+let capitalisedSurname = footballers.map(function (large){
+        console.log(large.lastname.toUpperCase());
+});
+
+console.log("---")
+
+let capitalisedName = footballers.map(function (namee){
+    console.log(namee.firstname.toUpperCase());
+});
+
+console.log("---")
+
+let origin = footballers.forEach(function(nat){
+   console.log(nat.nationality); 
+});
+
+console.log("---")
+
+let firstNames = footballers.forEach(function (first){
+    console.log(first.firstname);
+});
+
+console.log("---");
+
+let lastNames = footballers.forEach(function(last){
+    console.log(last.lastname);
+});
+
+console.log("---");
+
+let squadNumber = footballers.forEach(function (number){
+    console.log(number.shirtNumber);
+})
+
+console.log("---");
+
+let playerPosition = footballers.forEach(function (playpos){
+    console.log(playpos.position);
+})
+
+</script>
+</body>
+</html>

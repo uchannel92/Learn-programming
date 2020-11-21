@@ -1,0 +1,152 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+
+
+let people = [
+    {
+        name: {
+            firstname: "Uchenna",
+            lastname: "Attah",
+            },
+        age: 28,
+        gender: "Male",
+        job: {
+            title: "IT Analyst",
+            company: "Deloitte",
+            location: "Chancery Lane",
+            isPerm: false,
+            },
+        location: {
+            country: "UK",
+            city: "London",
+            postcode: "SE78TT",
+        },  
+    },
+    {
+        name: {
+            firstname: "Onyema",
+            lastname: "Attah",
+            },
+        age: 25,
+        gender: "Male",
+        job: {
+            title: "Pricing Executive",
+            company: "Dixons Carphone Warehouse",
+            location: "Ealing",
+            isPerm: true,
+            },
+        location: {
+            country: "UK",
+            city: "London",
+            postcode: "SE78TT",
+        },  
+    },
+    {
+        name: {
+            firstname: "Obi",
+            lastname: "Attah",
+            },
+        age: 33,
+        gender: "Female",
+        job: {
+            title: "Sales",
+            company: "London Stock Exchange",
+            location: "St Pauls",
+            isPerm: true,
+            },
+        location: {
+            country: "UK",
+            city: "London",
+            postcode: "SE78TT",
+        },  
+    },
+    {
+        name: {
+            firstname: "Iejomah",
+            lastname: "Attah",
+            },
+        age: 34,
+        gender: "Female",
+        job: {
+            title: "Head of Department Europe",
+            company: "Bloomberg",
+            location: "Moorgate/Broadgate",
+            isPerm: true,
+            },
+        location: {
+            country: "UK",
+            city: "London",
+            postcode: "SE8",
+            town: "Greenwich",
+        },  
+    },
+]
+
+// people.push(name.firstname = "Eberechi", name.lastname = "Eze", age = 21); // I can use a .push() but it seems to add more arrays so probably a syntax on how to do so.
+
+let fullname = people.map(function (full){
+    return `Right here is the ${full.name.firstname} ${full.name.lastname}`;
+})
+
+console.log(fullname); // used .map() method to get an array of fullnames from the people array object above.
+console.log(fullname[3]); // 2nd array item from the fullname variable.
+console.log("---");
+
+people[0].height = 5.8; // adding a new Key to the first array object (myself)
+console.log(people);
+console.log("---");
+
+console.log(people[0]);
+console.log(people[0].name.firstname);
+console.log("---");
+console.log(`${people[1].name.firstname} will be ${people[1].age + 5} in 5 years time. he is currently ${people[1].age}.`);
+console.log("---");
+
+let ages = people.map(function (age){
+    return age.age;
+});
+
+console.log(ages);
+console.log(ages.includes(28)); // does this include my age? will show true
+console.log(ages.includes(55)) // will show false
+
+console.log("---");
+
+let convertToString =people.map(function (firstName){
+    return firstName.name.firstname; // using map method to print all first names (probably can be written better the first function name and possibly the variable name too)
+})
+console.log("---");
+
+console.log(convertToString.join(", "));
+
+console.log("---");
+console.log(people[2].name.firstname);
+console.log(people[2].age);
+console.log(people[2].job.location);
+console.log("---");
+
+ let sum = 0
+ let averageAge = people.forEach(function (ages){
+     sum = ages.age + sum;
+ })
+
+let average = sum / ages.length;
+console.log("The average age of my sibling group is " + average)
+console.log("---");
+// let averageAge = people.age.reduce(function (total, count){
+//    console.log(total);
+//    console.log(count);
+//    console.log("---")
+//     return total + count;
+// },0);
+// console.log(averageAge);
+
+console.log("The length of ages in this object array is " + ages.length);
+
+</script>
+</body>
+</html>

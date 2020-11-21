@@ -1,0 +1,63 @@
+<html>
+<head>
+<title></title>
+<body>
+<script>
+
+function sumMobileCosts(costs){
+    let sum = 0
+    costs.forEach(function (cost){
+        console.log(mobiles) // logs the mobiles array object.
+        console.log(cost.finance) // the callback function now allows me to log finance
+        sum = cost.finance.cost + sum; // specify each cost and sum altogether
+    });
+        console.log(sum)
+        
+}
+
+
+let mobiles = [
+    {
+        model: "iPhone",
+        brand: "Apple",
+        operatingSystem: "IOS",
+        color: "Space Gray",
+        finance:{
+            cost: 1200,
+            network: "EE",
+            payMonthyly: true,
+        },
+    },
+    {
+        model: "Galaxy",
+        brand: "Samsung",
+        operatingSystem: "Android",
+        color: "Nautical Blue",
+        finance:{
+            cost: 1100,
+            network: "Vodafone",
+            payMonthyly: true,
+        },
+    },
+    {
+        model: 3310,
+        brand: "Nokia",
+        operatingSystem: "Windows",
+        color: "Blood Orange",
+        finance:{
+            cost: 250,
+            network: "T-Mobile",
+            payMonthyly: false,
+        },
+    },
+]
+
+console.log(sumMobileCosts(mobiles))
+console.log("---")
+
+
+
+</script>
+</body>
+</head>
+</html>

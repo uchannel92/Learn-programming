@@ -1,0 +1,32 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>Check the dev tools console big man.</h1>
+<script>
+
+//class definition
+class FootballClubs{
+    constructor(name, founded ,city , country, division, nickname){
+        console.log("New instance has been created..")
+        this.name = name;
+        this.founded = founded;
+        this.city = city;
+        this.country = country;
+        this.division = division;
+        this.nickname = nickname;
+    }
+}
+console.log("====");
+// class usage
+let club1 = new FootballClubs("Tottenham Hotspur", 1882, "London", "United Kingdom", "Premier League", "Spurs");
+console.log(club1);
+console.log("...");
+let club2 = new FootballClubs("Inter Milan", 1908, "Milan", "Italy", "Serie A", "internazionale");
+console.log(club2);
+console.log("...");
+
+</script>
+</body>
+</html>

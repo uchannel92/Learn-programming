@@ -1,0 +1,37 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+
+let recipes = [
+  {
+    title: "Pasta pesto",
+    preparationMinutes: 30,
+    rating: 4.5
+  },
+  {
+    title: "Lasagna",
+    preparationMinutes: 45,
+    rating: 3.9
+  }
+];
+
+let titles = recipes.map(function (title){
+    console.log(title.title.toUpperCase());
+})
+
+let foodRatings = recipes.forEach(function(fr){
+    console.log(fr.rating);
+})
+
+let newRatings = recipes.map(function(recip){
+    return recip.rating + 0.5;
+})
+
+console.log(newRatings);
+
+</script>
+</body>
+</html>

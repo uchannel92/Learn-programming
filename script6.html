@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+
+let person = {
+  firstname: "Uchenna",
+  lastname: "Attah",
+  nicknames:["chen", "chenna", "uchannel"],
+  age: 28,
+  canDrive: true,
+    address:{
+      lineOne: "13 Thorntree Road",
+      lineTwo: "Charlton",
+      postcode: "SE78TT",
+    },
+  mobile: 7896154774,
+  email: "uchenna.attah@hotmail.co.uk"
+};
+
+console.log(person);
+console.log(person.address.postcode);
+console.log(person.email.toUpperCase());
+console.log(person.nicknames);
+
+let upperCasedName = person.nicknames.map(function (test){
+  return test.toUpperCase()
+})
+
+console.log(upperCasedName)
+
+</script>
+</body>
+</html>
+
+

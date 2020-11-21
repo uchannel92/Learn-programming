@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script type="text/javascript">
+  
+function getPersonDescription(person) {
+  
+    // console.log(`${person.name} ${person.id} is a ${person.bio} living in ${person.location} with ${person.followers} followers.`);
+     return person.name + " " + "("+ person.id + ")" + " " + "is a " + person.bio + " living in " + person.location + " with " + person.followers + " followers.";
+    // return `${person.name} (${person.id}) is a ${person.bio} living in ${person.location} with ${person.followers} followers.`;
+}
+
+// Sample usage - do not modify
+let person = {
+  "login": "jadjoubran",
+  "id": 2265232,
+  "type": "User",
+  "name": "Jad Joubran",
+  "blog": "https://learnjavascript.online",
+  "location": "Amsterdam, the Netherlands",
+  "bio": "Google Developer Expert • Microsoft MVP • Web Consultant",
+  "public_repos": 154,
+  "public_gists": 25,
+  "followers": 965,
+  "following": 413,
+  "created_at": "2012-09-02T13:28:34Z",
+};
+
+console.log(getPersonDescription(person));
+
+
+</script>
+</body>
+</html>
+
+X1 by the name of the person
+X2 by the id of the person
+X3 by the bio of the person
+X4 by the location of the person
+X5 by the number of followers of the person

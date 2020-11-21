@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+
+let player = {
+    firstname: "Harry",
+    lastname: "Kane",
+    club: "Tottenham",
+    nationality: "English",
+    number: 10,
+    premierleaguegoals: [3,21,25,29,30,17,18,5],
+};
+
+
+// Using reduce method
+
+let sum = player.premierleaguegoals.reduce(function (total,current){
+
+return total + current
+
+},0);
+
+console.log(sum);
+console.log("Kanes total is"+ " " + sum)
+console.log(sum / player.premierleaguegoals.length) // average
+console.log(`His average goals per season is ${sum / player.premierleaguegoals.length}`)
+
+
+// Using forEach method
+// let sum = 0
+
+// player.premierleaguegoals.forEach(function(goals){
+//   sum = sum + goals
+// })
+// console.log(sum) // sum of all of Kanes goals per season (since 2013 - 3)
+// console.log(sum / player.premierleaguegoals.length) // average goals per season
+
+
+</script>
+</body>
+</html>

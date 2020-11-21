@@ -1,0 +1,57 @@
+<html>
+<head>
+<title></title>
+<body>
+<script>
+
+
+function getSumGrades(grades) {
+    
+
+     let getSumGrades = listGrades.reduce(function (total, current){
+         console.log(total)
+         console.log(current)
+         console.log("---")
+         return total + current;
+     },0);
+         return getSumGrades
+};
+
+
+
+
+// Sample usage - do not modify
+
+let grades = [
+ {
+   name: "Sam Blue",
+   grade: 14
+ },
+ {
+   name: "Charlie Bron",
+   grade: 16
+ },
+ {
+   name: "Joe Bloggs",
+   grade: 19
+ }
+];
+
+let listGrades = grades.map(function (listOfGrades){
+
+    return listOfGrades.grade;
+
+});
+
+console.log(listGrades);
+console.log("---");
+console.log(getSumGrades(grades));
+
+
+</script>
+</body>
+</head>
+</html>
+
+
+

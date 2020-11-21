@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    /**
+ * @param {Object} tweet
+ */
+function getFullName(tweet) {
+    console.log(tweet.author.details.firstName);
+    console.log(tweet.author.details.lastName);
+    console.log(`${tweet.author.details.firstName} ${tweet.author.details.lastName}`)
+}
+
+// Sample usage - do not modify
+let tweet = {
+    id: 1080777336298049537,
+    message: `I just launched http://learnjavascript.online ✨
+
+👉 Learn JavaScript interactively in the browser
+👉 Step by step lessons & challenges
+👉 Modern JavaScript & best practices
+👉 Recap what you learned with the flashcards PWA`,
+    link: "https://learnjavascript.online",
+    created_at: "2029-01-03 11:46:00",
+    author: {
+        id: 109215315,
+        details: {
+            firstName: "Jad",
+            lastName: "Joubran",
+        },
+        handle: "JoubranJad"
+    }
+};
+console.log(getFullName(tweet)); // "Jad Joubran"
+
+</script>
+</body>
+</html>

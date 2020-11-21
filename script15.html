@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+<body>
+
+<script>
+
+function getFullNames(names){
+    return names.map(function (name){
+        return `${name.firstname} ${name.lastname}, ${name.shirtNumber}`
+        console.log(name);
+    });
+};
+
+let footballers = [
+    {
+        firstname: "Hugo",
+        lastname: "Lloris",
+        position: "Goalkeeper",
+        shirtNumber: 1,
+    },
+    {
+        firstname: "Sergio",
+        lastname: "Regulion",
+        position: "Left Back",
+        shirtNumber: 3,
+    },
+    {
+        firstname: "Eric",
+        lastname: "Dier",
+        position: "Centre Back",
+        shirtNumber: 15,
+    },
+    {
+        firstname: "Toby",
+        lastname: "Alderwiereld",
+        position: "Right back",
+        shirtNumber: 4,
+    },
+    {
+        firstname: "Serge",
+        lastname: "Aurier",
+        position: "Right back",
+        shirtNumber: 24,
+    },
+
+]
+
+footballers[1].shirtNumber = 3;
+
+console.log(getFullNames(footballers))
+
+</script>
+</body>
+</html>

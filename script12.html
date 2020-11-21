@@ -1,0 +1,78 @@
+<html>
+<head>
+<title></title>
+<body>
+<script>
+
+
+let mobiles = [
+    {
+        model: "iPhone",
+        brand: "Apple",
+        operatingSystem: "IOS",
+        color: "Space Gray",
+        finance:{
+            cost: 1200,
+            network: "EE",
+            payMonthyly: true,
+        },
+    },
+    {
+        model: "Galaxy",
+        brand: "Samsung",
+        operatingSystem: "Android",
+        color: "Nautical Blue",
+        finance:{
+            cost: 1100,
+            network: "Vodafone",
+            payMonthyly: true,
+        },
+    },
+    {
+        model: 3310,
+        brand: "Nokia",
+        operatingSystem: "Windows",
+        color: "Blood Orange",
+        finance:{
+            cost: 250,
+            network: "T-Mobile",
+            payMonthyly: false,
+        },
+    },
+]
+
+console.log(mobiles);
+console.log("---")
+
+console.log(mobiles[2].finance.network); // Third array object mobile network.
+
+let listOpSys = mobiles.map(function (opSys){ // iterating the mobiles object with the callback opSys to map all mobile models uppercased.
+    return opSys.operatingSystem.toUpperCase(); 
+});
+
+console.log(listOpSys);
+console.log("---");
+
+
+
+let prices = mobiles.map(function (phoneCosts){ // create an array of all phone prices from the mobiles object.
+    return phoneCosts.finance.cost;
+})
+
+console.log(prices); // the array of phone prices have been logged here under the prices variable.
+
+let totalCost = prices.reduce(function (total, current){ // I can then sum the prices of the mobiles from the mobiles array object using the prices array under a new array called Total cost.
+    // console.log(total);
+    // console.log(current);
+    // console.log("---");
+    return  total + current;
+},0);
+
+console.log(totalCost); // total cost of phones is logged here.
+
+
+
+</script>
+</body>
+</head>
+</html>
