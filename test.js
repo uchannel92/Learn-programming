@@ -50,8 +50,12 @@ export default class Employees {
         }
 }
 
-class Admin extends Employees {
-        paySalary(){
+export class Admin extends Employees {
+        paySalary() {
             console.log("Pay user salary");
+        }
+
+        getFullName() {
+            return this.firstName
         }
 }

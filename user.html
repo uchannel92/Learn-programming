@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Class Examples script</title>
+</head>
+<body>
+<script>
+
+// class definition
+class Footballer {
+    constructor(firstName, lastName, age) {
+        console.log("New Instance to class has been created.");
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+
+    isPlayerSenior() {
+        if (this.age <= 20) {
+            return `${this.firstName} is a youth player`;
+        } else {
+            return `${this.firstName} is a senior player`;
+        }
+    }
+
+    getInitals() {
+        return `${this.firstName[0]}${this.lastName[0]}`;
+    }
+}
+
+class Manager extends Footballer {
+    getFullName() {
+        return this.firstName + " " + this.lastName + " " + "(Manager)";
+    }
+
+    getInitals() {
+        return `${this.firstName[0]}${this.lastName[0]} - (Manager)`
+    }
+}
+
+
+
+//class usage
+let harry = new Footballer("Harry", "Kane", 27);
+// console.log(harry);
+// console.log(harry.isPlayerSenior());
+// console.log(harry.getFullName());
+// console.log(harry.getInitals())
+alert((harry.getInitals()))
+
+let oliver = new Footballer("Oliver", "Skipp", 19)
+// console.log(oliver);
+// console.log(oliver.isPlayerSenior());
+// console.log(oliver.getFullName());
+
+let jose = new Manager("Jose", "Mourinho", 57)
+// console.log(jose);
+// console.log(jose.getFullName());
+// console.log(jose.getInitals())
+
+
+
+</script>
+</body>
+</html>
