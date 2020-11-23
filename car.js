@@ -1,5 +1,5 @@
 //class definition.
-export default class Cars {
+class Cars {
     constructor(brand, model, year, doors, engineSize, fuelType) {
         console.log("New instance has been added to class Cars.")
         this.brand = brand;
@@ -11,4 +11,9 @@ export default class Cars {
     }
 
 }
+
+
+let car1 = new Cars("Merceds", "A Class", 2015, 3, 2.0, "Diesel");
+console.log(car1.model)
+
 
