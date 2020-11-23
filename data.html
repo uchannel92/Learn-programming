@@ -4,13 +4,61 @@
 </head>
 
 <body>
-<script type="module">
-import Cars from "./car.js"
+<script>
+
+//class definition.
+class Cars {
+    constructor(brand, model, year, doors, engineSize, fuelType, owner, emissions) {
+        console.log("New instance has been added to class Cars.")
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.doors = doors;
+        this.engineSize = engineSize;
+        this.fuelType = fuelType;
+        this.owner = owner;
+        this.emissions = emissions;
+    }
+
+    getSecondaryOwner() {
+        return `The second owner of this vehicle is ${this.owner[1]}`
+    }
+
+    getFuelEmissionsTax() {
+
+        if (this.emissions >= 76 && this.emissions < 90) {
+
+            return "£110"
+
+        } else if (this.emissions >= 90 && this.emissions < 100) {
+
+            return "£135"
+
+        } else (this.emissions >= 110)
+        
+            return "£155"
+    }
+
+    
+}
+
+class CarInfo extends Cars {
+    getReg() {
+        return `${this.brand[0]}${this.model[0]}${this.owner.length}`
+    }
+}
 
 //class usage
+let car1 = new Cars("Mercedes", "A Class", 2015, 3, 2.0, "Diesel", ["Michael", "Susan"], 94);
+// console.log(car1.model)
+console.log(car1.getFuelEmissionsTax())
 
-car1 = new Cars("Merceds", "A Class", 2015, 3, 2.0, "Diesel");
-console.log(car1.model)
+let car2 = new Cars("Vauxhall", "Astra", 2010, 5, 1.6, "Petrol", ["Mary", "Jousha", "Ian"], 151);
+// console.log(car2.getSecondaryOwner())
+console.log(car2.getFuelEmissionsTax())
+
+let car3 = new CarInfo("BMW", "3 Series", 2017, 3, 2.3, "Petrol", "Jessica", 120)
+console.log(car3.getReg())
 
 </script>
 </body>
